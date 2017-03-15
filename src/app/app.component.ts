@@ -15,6 +15,8 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { VolunteerEventsService } from '../lib/service/volunteer-events-service'
 import { admin} from '../pages/admin/admin';
+import {PopoverController} from 'ionic-angular';
+//import {AdminPopoverComponent} from '../lib/components/admin-popover.component';
 
 
 @Component({
@@ -29,13 +31,16 @@ export class MyApp {
   pages: Array<{ title: string, component: any }>;
   username: String = "";
   appManager: any = {};
+  public showAdmin: boolean;
   constructor(
     public platform: Platform,
     public config: Config,
     public menu: MenuController,
     public userServices: UserServices,
     public storage: Storage,
-    public volunteerEvents : VolunteerEventsService
+    public volunteerEvents : VolunteerEventsService,
+    public popoverCtrl: PopoverController
+    
   ) {
     this.initializeApp();
 
@@ -144,4 +149,15 @@ export class MyApp {
       };
     }
   }
+    /*presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(AdminPopoverComponent);
+    popover.present({
+      ev: myEvent
+    });
+  }*/
+showAdmin1()
+{
+  this.showAdmin=!this.showAdmin
+}
+
 }

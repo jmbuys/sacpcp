@@ -40,6 +40,8 @@ import { EventSortPipe } from '../lib/pipe/eventsortpipe';
 import { ParseTimePipe } from '../lib/pipe/moment.pipe';
 import { ContactMethod } from '../lib/components/ContactMethod/contactMethod.component';
 import { admin} from '../pages/admin/admin';
+import {PopoverController } from 'ionic-angular';
+import {Component} from '@angular/core'
 export const deepLinkConfig: DeepLinkConfig = {
   links: [
     { component: ChangePasswordPage, name: 'Change Password Page', segment: 'password-reset/confirm/:iud/:key' },
@@ -116,4 +118,5 @@ export function translateFactory(http: Http) {
   ],
   providers: [Storage, UseridPopover, PasswordPopover, UserServices, VolunteerEventsService]
 })
+
 export class AppModule {}
