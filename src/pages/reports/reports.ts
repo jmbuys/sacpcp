@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  templateUrl: 'admin.html'
+  templateUrl: 'reports.html'
 })
-export class admin {
+export class Reports {
   constructor(public nav: NavController) {
 
   }
+
   back() {
     this.nav.pop();
   }

@@ -20,6 +20,10 @@ import { EventPage } from '../pages/events/events';
 import { MyEventsPage } from '../pages/myevents/myevents';
 import { RegisterLoginPage } from '../pages/register-login/register-login';
 import { RegisterIndividualProfilePage } from '../pages/register-individual-profile/register-individual-profile';
+import { CreateEvent } from '../pages/create-event/create-event';
+import { EditEvent } from '../pages/edit-event/edit-event';
+import { Reports } from '../pages/reports/reports';
+import { ContactVolunteers } from '../pages/contact-volunteers/contact-volunteers';
 import { AppHeaderComponent } from '../lib/components/app-header.component';
 import { HomeTab } from '../lib/components/home-tab';
 import { PhoneInput } from '../lib/components/phone-input.component';
@@ -83,7 +87,11 @@ export function translateFactory(http: Http) {
     EventDetailModal,
     ContactMethod,
     PhoneInput,
-    admin
+    admin,
+    CreateEvent,
+    EditEvent,
+    Reports,
+    ContactVolunteers
   ],
   imports: [
     HttpModule,
@@ -114,7 +122,11 @@ export function translateFactory(http: Http) {
     RegisterLoginPage,
     RegisterIndividualProfilePage,
     EventDetailModal,
-    admin
+    admin,
+    CreateEvent,
+    EditEvent,
+    Reports,
+    ContactVolunteers
   ],
   providers: [Storage, UseridPopover, PasswordPopover, UserServices, VolunteerEventsService]
 })

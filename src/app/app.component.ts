@@ -16,6 +16,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { VolunteerEventsService } from '../lib/service/volunteer-events-service'
 import { admin} from '../pages/admin/admin';
 import {PopoverController} from 'ionic-angular';
+import {CreateEvent} from '../pages/create-event/create-event';
+import {EditEvent} from '../pages/edit-event/edit-event';
+import {Reports} from '../pages/reports/reports';
+import {ContactVolunteers} from '../pages/contact-volunteers/contact-volunteers';
 //import {AdminPopoverComponent} from '../lib/components/admin-popover.component';
 
 
@@ -53,7 +57,13 @@ export class MyApp {
       { title: 'Change Password', component: ChangePasswordPage },
       { title: 'About', component: AboutPage },
       { title: 'Contact Us', component: ContactPage },
-      { title: 'Admin', component: admin }
+      { title: 'Admin', component: admin },
+      { title: 'Create Event', component: CreateEvent },
+      { title: 'Edit Event', component: EditEvent },
+      { title: 'Reports', component: Reports },
+      { title: 'Contact Volunteers', component: ContactVolunteers }
+
+
 
 
     ];
