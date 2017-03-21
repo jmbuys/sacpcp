@@ -16,10 +16,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { VolunteerEventsService } from '../lib/service/volunteer-events-service'
 import { admin} from '../pages/admin/admin';
 import {PopoverController} from 'ionic-angular';
-import {CreateEvent} from '../pages/create-event/create-event';
-import {EditEvent} from '../pages/edit-event/edit-event';
-import {Reports} from '../pages/reports/reports';
-import {ContactVolunteers} from '../pages/contact-volunteers/contact-volunteers';
+import {CreateEvent} from '../pages/admin/create-event/create-event';
+import {EditEvent} from '../pages/admin/edit-event/edit-event';
+import {Reports} from '../pages/admin/reports/reports';
+import {ContactVolunteers} from '../pages/admin/contact-volunteers/contact-volunteers';
 //import {AdminPopoverComponent} from '../lib/components/admin-popover.component';
 
 

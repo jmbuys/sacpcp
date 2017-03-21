@@ -20,10 +20,11 @@ import { EventPage } from '../pages/events/events';
 import { MyEventsPage } from '../pages/myevents/myevents';
 import { RegisterLoginPage } from '../pages/register-login/register-login';
 import { RegisterIndividualProfilePage } from '../pages/register-individual-profile/register-individual-profile';
-import { CreateEvent } from '../pages/create-event/create-event';
-import { EditEvent } from '../pages/edit-event/edit-event';
-import { Reports } from '../pages/reports/reports';
-import { ContactVolunteers } from '../pages/contact-volunteers/contact-volunteers';
+import { CreateEvent } from '../pages/admin/create-event/create-event';
+import { EditEvent } from '../pages/admin/edit-event/edit-event';
+import { Reports } from '../pages/admin/reports/reports';
+import { ContactVolunteers } from '../pages/admin/contact-volunteers/contact-volunteers';
+import { admin} from '../pages/admin/admin';
 import { AppHeaderComponent } from '../lib/components/app-header.component';
 import { HomeTab } from '../lib/components/home-tab';
 import { PhoneInput } from '../lib/components/phone-input.component';
@@ -43,7 +44,6 @@ import { TimeFromNowPipe } from '../lib/pipe/timefromnow.pipe';
 import { EventSortPipe } from '../lib/pipe/eventsortpipe';
 import { ParseTimePipe } from '../lib/pipe/moment.pipe';
 import { ContactMethod } from '../lib/components/ContactMethod/contactMethod.component';
-import { admin} from '../pages/admin/admin';
 import {PopoverController } from 'ionic-angular';
 import {Component} from '@angular/core'
 export const deepLinkConfig: DeepLinkConfig = {
