@@ -12,3 +12,5 @@ hooks/
 Thumbs.db
 .tmp
 npm-debug.log
+*.xml
+.idea/

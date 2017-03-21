@@ -1,5 +1,5 @@
 <ion-header>
-    <app-header back="true" title="Admin">
+    <app-header back="true" title="Create Event">
     </app-header>
 </ion-header>
 
@@ -16,11 +16,82 @@
         </div> 
     </section>
     <section id="tab-content" padding>
-        
 
-       
+
+
+        <label class="item item-input">
+            <span class="input-label">Event Id:</span>
+            <input type="text">
+        </label>
+
+        <label class="item item-input">
+            <span class="input-label">Event Type:</span>
+            <input type="text">
+        </label>
+
+
+        <ion-card-content>
+            <ion-list text-wrap class="toggle-section">
+                <ion-list-header (click)="substance=!substance" [class.selected]="substance">
+                    {{" Event Details" | translate }}
+                    <ion-icon *ngIf="!substance" primary item-right name="ios-add-circle-outline"></ion-icon>
+                    <ion-icon *ngIf="substance" primary item-right name="ios-remove-circle-outline"></ion-icon>
+                </ion-list-header>
+                <div class="toggle-section-content" [class.hide-section]="!substance">
+                    <p>
+                    </p>
+                </div>
+            </ion-list>
+
+            <ion-list text-wrap class="toggle-section">
+                <ion-list-header (click)="veterans=!veterans" [class.selected]="veterans">
+                    {{"Volunteer Information" | translate }}
+                    <ion-icon *ngIf="!veterans" primary item-right name="ios-add-circle-outline"></ion-icon>
+                    <ion-icon *ngIf="veterans" primary item-right name="ios-remove-circle-outline"></ion-icon>
+                </ion-list-header>
+                <div class="toggle-section-content" [class.hide-section]="!veterans">
+                    <p>
+                    </p>
+                </div>
+            </ion-list>
+
+            <ion-list text-wrap class="toggle-section">
+                <ion-list-header (click)="emergency=!emergency" [class.selected]="emergency">
+                    {{"Special Instructions" | translate }}
+                    <ion-icon *ngIf="!emergency" primary item-right name="ios-add-circle-outline"></ion-icon>
+                    <ion-icon *ngIf="emergency" primary item-right name="ios-remove-circle-outline"></ion-icon>
+                </ion-list-header>
+                <div class="toggle-section-content" [class.hide-section]="!emergency">
+                    <p>
+                    </p>
+                </div>
+            </ion-list>
+
+            <ion-list text-wrap class="toggle-section">
+                <ion-list-header (click)="transitional=!transitional" [class.selected]="transitional">
+                    {{"Contacts" | translate }}
+                    <ion-icon *ngIf="!transitional" primary item-right name="ios-add-circle-outline"></ion-icon>
+                    <ion-icon *ngIf="transitional" primary item-right name="ios-remove-circle-outline"></ion-icon>
+                </ion-list-header>
+                <div class="toggle-section-content" [class.hide-section]="!transitional">
+                    <p>
+                    </p>
+                </div>
+            </ion-list>
+        </ion-card-content>
+
+
+        <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel Event</button>
+        <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Save </button>
+        <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Create Event</button>
+
+
+
+
         <div class="sal-att-logo-container">
             <img src="assets/img/collaboration.png" />
         </div>
+
+
     </section>
 </ion-content>
