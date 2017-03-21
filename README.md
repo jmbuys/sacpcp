@@ -1,33 +1,43 @@
 ## Getting Started
 
-Fork my repo in github here:
-https://github.com/ml5174/sacpcp
+### Preliminary GitHub Setup
 
-Also for the lib repot in github here:
-https://github.com/ml5174/savi-lib
+1.      first create an account on github.com if you don't already have one
+1.      login to github
+1.      visit https://github.com/ml5174/sacpcp and fork the main source repo
+1.      visit https://github.com/ml5174/savi-lib fork the library source repo
 
-1.      You need to install [node] (https://nodejs.org/en/download/)
-1.      Clone from your sacpcp repo:
-        git clone https://github.com/<repo>/sacpcp.git
-        where <repo> is your repo on github
-1.		cd sacpcp
+
+### Development Environment Setup
+
+1.      install LTS build of node from https://nodejs.org/en/download/  
+1.      Clone from your sacpcp fork:<br>
+        git clone https://github.com/githubusername/sacpcp.git<br>
+        where githubusername is your username on github<br>
+        and the path given to clone is for your sacpcp fork
+1.      cd sacpcp
 1.      cd src
-1.      Clone from your savi-lib repo:
-        git clone https://github.com/<repo>/savi-lib.git lib
+1.      Clone from your savi-lib repo into a subfolder of src:<br>
+        git clone https://github.com/githubusername/savi-lib.git lib<br>
+        where githubusername is your username on github<br>
+        and the path give to clone is for your lib fork<br>
+        NOTE: your lib subfolder of src needs to be named lib<br>
+        If you failed to give the lib argument as target name, then rename the lib folder to lib
 1.      cd lib
 1.      Set the upstream master for lib:
         git remote add upstream https://github.com/ml5174/savi-lib.git
 1.      git checkout master
 1.      git pull upstream master
 1.      cd ../..
-1.      Set the upstream master for the main source:
+1.      Set the upstream master for the main source:<br>
         git remote add upstream https://github.com/ml5174/sacpcp.git
 1.      git checkout master
 1.      git pull upstream master
-1.      Once you cloned the repo to your desktop and have node installed you need to cd to the project and type:
+1.      Once you cloned the repo to your desktop and have node installed you need to cd to the project and type:<br>
         npm install
-1.      Now install cordova and ionic. if on macOS, you may need to prefix this command with sudo:
+1.      Now install cordova and ionic. if on macOS, you may need to prefix this command with sudo:<br>
         npm install -g cordova ionic
+
 
 ### Launching the application
 *	If all went well, you should be able to launch the application to your default browser:<br>
@@ -40,7 +50,7 @@ https://github.com/ml5174/savi-lib
 *	You may also try adding android platform:<br>
         ionic platform add android
         
-##### If having issues, then check your software installation versions with ionic info and npm --version output:
+### If having issues, then check your software installation versions with ionic info and npm --version output:
 
 ionic info <br>
 
@@ -59,3 +69,5 @@ Xcode version: Xcode 8.2.1 Build version 8C1002 <br>
 <br>
 npm --version <br>
 3.10.10
+
+### See CONTRIBUTING.md for detailed git operations where developers follow a preferred workflow with pull requests to upstream master coming from their github forks
