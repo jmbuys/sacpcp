@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
-import { states } from '../../../lib/json/states';
+import { states } from '../../../static_json/states';
 
 @Component({
   templateUrl: 'create-event.html'
