@@ -5,15 +5,15 @@
 
 <ion-content padding-left padding-right padding-top>
 
-   <section id="header">
-       
-   </section>
-   <section id="home-body">
+    <section id="header">
 
-       <div>
+    </section>
+    <section id="home-body">
 
-             
-        </div> 
+        <div>
+
+
+        </div>
     </section>
     <section id="tab-content" padding>
 
@@ -39,15 +39,15 @@
                 </ion-list-header>
                 <div class="toggle-section-content" [class.hide-section]="!substance">
                     <p>
-                    <label class="item item-input" style="display:flex;">
+                        <label class="item item-input" style="display:flex;">
                     <span class="input-label">Event Name:</span>
                     <input type="text" style="flex-grow: 1;">
                     </label>
-                    <label class="item item-input">
+                        <label class="item item-input">
                     <span class="input-label">Event Description:</span>
                     <input type="text">
                     </label>
-                       </p>
+                    </p>
                     <label class="item item-input item-select">
                         <div class="input-label"> Event Status</div>
                             <select>
@@ -56,19 +56,19 @@
                                 <option>Blue</option>
                            </select>
                     </label>
-                     <label class="item item-input item-select">
+                    <label class="item item-input item-select">
                         <div class="input-label"> Event Date</div>
                             <input type ="date">
-                    </label> 
-                     <label class="item item-input item-select">
+                    </label>
+                    <label class="item item-input item-select">
                         <div class="input-label"> Event Start Time</div>
                             <input type ="Time">
                     </label>
                     <label class="item item-input item-select">
                         <div class="input-label"> Event End Time</div>
                             <input type ="Time">
-                    </label>                              
-                 <label class="item item-input item-select">
+                    </label>
+                    <label class="item item-input item-select">
                         <div class="input-label"> Pre-defined Event Location</div>
                             <select>
                                 <option>Dallas, Texas</option>
@@ -76,23 +76,21 @@
                                 <option>Atlanta, Georgia</option>
                            </select>
                 </label>
-                <label class="item item-input">
+                    <label class="item item-input">
                     <span class="input-label">Address:</span>
                     <input type="text">
                     </label>
-                <label class="item item-input">
+                    <label class="item item-input">
                     <span class="input-label">City:</span>
                     <input type="text">
                     </label>
-                   <label class="item item-input item-select">
+                    <label class="item item-input item-select">
                         <div class="input-label"> State</div>
                             <select>
-                                <option>Red</option>
-                                <option>Green</option>
-                                <option>Blue</option>
+                                <option *ngFor="let state of states" [value]="state.alpha-2">{{state.name}}</option>
                            </select>
-                    </label>       
-                    </div>
+                    </label>
+                </div>
             </ion-list>
 
             <ion-list text-wrap class="toggle-section">

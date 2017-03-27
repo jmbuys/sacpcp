@@ -28,6 +28,8 @@ import { admin} from '../pages/admin/admin';
 import { AppHeaderComponent } from '../lib/components/app-header.component';
 import { HomeTab } from '../lib/components/home-tab';
 import { PhoneInput } from '../lib/components/phone-input.component';
+import { AccordionBox } from '../lib/components/accordion-box';
+import { PrivacyTermsContent } from '../lib/components/privacy-terms-content';
 import { Storage } from '@ionic/storage';
 
 import { UseridPopover } from '../popover/userid';
@@ -91,7 +93,9 @@ export function translateFactory(http: Http) {
     CreateEvent,
     EditEvent,
     Reports,
-    ContactVolunteers
+    ContactVolunteers,
+    AccordionBox,
+    PrivacyTermsContent
   ],
   imports: [
     HttpModule,

@@ -18,8 +18,8 @@ export class CreateEvent implements OnInit{
     //this.http.get('json/states.json')
     //        .map(res => {
     //          console.log(res.json())
-    this.http.get('./www/assets/states.json').toPromise().then(res => {
-    console.log(res.json());
+    this.http.get('./assets/json/states.json').toPromise().then(res => {
+    this.states  = res.json();
 })
            
             .catch((error: any) => Observable.throw(error || 'Server error'));
