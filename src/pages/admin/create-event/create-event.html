@@ -47,15 +47,14 @@
                     <span class="input-label">Event Description:</span>
                     <input type="text">
                     </label>
-                       </p>
+                    </p>
                     <label class="item item-input item-select">
                         <div class="input-label"> Event Status</div>
-                        <select>
-                            <option>red</option>
-                            <option>yellow</option>
-                            <option>green</option>
-                        </select>
-
+                            <select>
+                                <option>Red</option>
+                                <option>Green</option>
+                                <option>Blue</option>
+                           </select>
                     </label>
                     <label class="item item-input item-select">
                         <div class="input-label"> Event Date</div>
@@ -87,115 +86,12 @@
                     </label>
                     <label class="item item-input item-select">
                         <div class="input-label"> State</div>
-                        <select>
-                            <option> Alabama</option>
-                            <option>Alaska</option>
-                            <option>Arizona</option>
-                            <option>Arkansas</option>
-                            <option> California</option>
-                            <option> Colorado</option>
-                            <option>  Connecticut</option>
-                            <option>  Delaware</option>
-                            <option>  Florida</option>
-                            <option> Georgia</option>
-                            <option> Hawaii</option>
-                            <option> Idaho</option>
-                            <option> Illinois </option>
-                            <option>    Indiana</option>
-                            <option> Iowa</option>
-                            <option> Kansas</option>
-                            <option> Kentucky</option>
-                            <option> Louisiana</option>
-                            <option> Maine</option>
-                            <option> Maryland</option>
-                            <option> Massachusetts</option>
-                            <option> Michigan</option>
-                            <option> Minnesota</option>
-                            <option> Mississippi</option>
-                            <option> Missouri</option>
-                            <option> Montana </option>
-                            <option>      Nebraska</option>
-                            <option>  Nevada</option>
-                            <option> New Hampshire</option>
-                            <option> New Jersey</option>
-                            <option> New Mexico</option>
-                            <option>  New York</option>
-                            <option>  North Carolina</option>
-                            <option> North Dakota</option>
-                            <option>  Ohio</option>
-                            <option>   Oklahoma</option>
-                            <option>  Oregon</option>
-                            <option>  Pennsylvania</option>
-                            <option>Rhode Island</option>
-                            <option> South Carolina</option>
-                            <option> South Dakota</option>
-                            <option> Tennessee</option>
-                            <option> Texas</option>
-                            <option>   Utah</option>
-                            <option>  Vermont</option>
-                            <option>  Virginia</option>
-                            <option>  Washington</option>
-                            <option>  West Virginia</option>
-                            <option>   Wisconsin</option>
-                            <option>   Wyoming</option>
-                        </select>
-                    </label>       
-                    </div>
+                            <select>
+                                <option *ngFor="let state of states" [value]="state.alpha-2">{{state.name}}</option>
+                           </select>
+                    </label>
+                </div>
             </ion-list>
-            <label class="item item-input">
-                <span class="input-label">Zip Code</span>
-                <input type="text">
-            </label>
-
-            <label class="item item-input item-select">
-                <div class="input-label"> Service Area</div>
-                <select>
-                    <option>red</option>
-                    <option>yellow</option>
-                    <option>green</option>
-                </select>
-
-            </label>
-            <label class="item item-input item-select">
-                <div class="input-label"> *Display Event:</div>
-                <select>
-                    <option>red</option>
-                    <option>yellow</option>
-                    <option>green</option>
-                </select>
-
-            </label>
-            <label class="item item-input item-select">
-                <div class="input-label"> Court Mandated Hours:</div>
-                <select>
-                    <option>red</option>
-                    <option>yellow</option>
-                    <option>green</option>
-                </select>
-
-            </label>
-            <label class="item item-input item-select">
-                <div class="input-label"> Event Category:</div>
-                <select>
-                    <option>red</option>
-                    <option>yellow</option>
-                    <option>green</option>
-                </select>
-
-            </label>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <ion-list text-wrap class="toggle-section">
                 <ion-list-header (click)="veterans=!veterans" [class.selected]="veterans">
