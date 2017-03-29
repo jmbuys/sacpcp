@@ -122,6 +122,25 @@
                 </ion-list-header>
                 <div class="toggle-section-content" [class.hide-section]="!veterans">
                     <p>
+                        <label class="item item-input item-select">
+                        <div class="input-label"> Volunteer type restrictions:</div>
+                            <select>
+                                <option>None</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                           </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label"> Same day sign up allowed:</div>
+                            <select>
+                                <option>Y</option>
+                                <option>N</option>
+                           </select>
+                    </label>
+                    <label class="item item-input">
+                    <span class="input-label">Minimum Volunteers Needed:</span>
+                    <input type="text">
+                    </label>
                     </p>
                 </div>
             </ion-list>
