@@ -37,6 +37,9 @@ import { PasswordPopover } from '../popover/password';
 import { EventSortPopover } from '../popover/eventsort-popover';
 import { PreferredSearchPopover } from '../popover/preferredsearch-popover';
 
+import { ParentVerifyModal } from '../modals/parent-verify-modal';
+import { PrivacyTermsModal } from '../modals/privacy-terms-modal';
+
 import { UserServices } from '../lib/service/user';
 import { VolunteerEventsService } from '../lib/service/volunteer-events-service';
 
@@ -81,6 +84,8 @@ export function translateFactory(http: Http) {
     PasswordPopover,
     EventSortPopover,
     PreferredSearchPopover,
+    ParentVerifyModal,
+    PrivacyTermsModal,
     ReferralSourcePipe,
     MomentTimeZonePipe,
     TimeFromNowPipe,
@@ -117,6 +122,8 @@ export function translateFactory(http: Http) {
     PasswordPopover,
     EventSortPopover,
     PreferredSearchPopover,
+    ParentVerifyModal,
+    PrivacyTermsModal,
     HomePage,
     DonatePage,
     ForgotPage,

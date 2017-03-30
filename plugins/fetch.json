@@ -55,6 +55,7 @@
         "is_top_level": true,
         "variables": {}
     },
+<<<<<<< HEAD
     "cordova-plugin-camera": {
         "source": {
             "type": "registry",
@@ -67,6 +68,12 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-file"
+=======
+    "cordova-plugin-app-version": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-app-version@0.1.9"
+>>>>>>> upstream/master
         },
         "is_top_level": true,
         "variables": {}
