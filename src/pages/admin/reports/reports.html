@@ -10,8 +10,26 @@
    <section id="home-body">
 
        <div>
-
-             
+                <h1> Data Export </h1>
+                 <ion-item>
+                    <ion-label> Event Registration Detail Report</ion-label>
+                    <ion-toggle></ion-toggle>
+                 </ion-item>
+                 <ion-item>
+                    <ion-label> Event Registration Summary Report</ion-label>
+                    <ion-toggle></ion-toggle>
+                 </ion-item>
+                 <h5> Select the Date Range </h5>
+                 <label class="item item-input item-select">
+                            <div class="input-label"> Start Date:</div>
+                            <input type="date">
+                 </label>
+                 <label class="item item-input item-select">
+                            <div class="input-label"> End Date:</div>
+                            <input type="date">
+                 </label>
+                 <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
+                 <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Export Data</button>
         </div> 
     </section>
     <section id="tab-content" padding>
