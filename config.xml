@@ -5,7 +5,11 @@
 =======
 <widget id="com.att.ent.savi" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>DFW</name>
+<<<<<<< HEAD
 >>>>>>> upstream/master
+=======
+>>>>>>> 3f4e5378c9cbc74948b8fdcb6bbede860b1a5537
+>>>>>>> 7b77e32344d06934efbbd174386e85b3962f959d
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />

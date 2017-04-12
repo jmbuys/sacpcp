@@ -1,7 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav, Select, Config } from 'ionic-angular';
-
 import { StatusBar } from 'ionic-native';
 import { Keyboard } from 'ionic-native';
 import { Storage } from '@ionic/storage';
@@ -23,11 +21,9 @@ import {EditEvent} from '../pages/admin/edit-event/edit-event';
 import {Reports} from '../pages/admin/reports/reports';
 import {ContactVolunteers} from '../pages/admin/contact-volunteers/contact-volunteers';
 import {AdminPopoverComponent} from '../lib/components/admin-popover.component';
-import { AppVersion } from 'ionic-native';
 import { ServerVersion } from '../providers/server-version';
 import { version } from '../../package';
-
-
+import { AppVersion } from 'ionic-native';
 @Component({
   templateUrl: 'app.html',
   providers:[ServerVersion]

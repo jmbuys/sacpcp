@@ -6,6 +6,7 @@ import { VolunteerEventsService } from '../../lib/service/volunteer-events-servi
 import { NOTIFICATION_SCHEDULE, NOTIFICATION_OPTIONS, AGE_RESTRICTION, GENDER_RESTRICTION, VOLUNTEER_RESTRICTION, EVENT_STATUS, SAMEDAY_RESTRICTION } from './../../lib/provider/eventConstants';
 
 
+
 @Component({
     templateUrl: 'eventdetail_modal.html'
 })
