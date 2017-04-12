@@ -10,14 +10,14 @@
    <section id="home-body">
 
        <div>
-                <h1> Data Export </h1>
+                <ion-list-header>Data Export </ion-list-header>
                  <ion-item>
                     <ion-label> Event Registration Detail Report</ion-label>
-                    <ion-toggle></ion-toggle>
+                    <ion-checkbox></ion-checkbox>
                  </ion-item>
                  <ion-item>
                     <ion-label> Event Registration Summary Report</ion-label>
-                    <ion-toggle></ion-toggle>
+                    <ion-checkbox></ion-checkbox>
                  </ion-item>
                  <h5> Select the Date Range </h5>
                  <label class="item item-input item-select">
@@ -29,8 +29,22 @@
                             <input type="date">
                  </label>
                  <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
-                 <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Export Data</button>
+                 <button ion-button small color="primary" data-toggle="modal" >Export Data</button>
         </div> 
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p> Some text </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button ion-button small color="primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="tab-content" padding>
         
