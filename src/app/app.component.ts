@@ -193,7 +193,7 @@ export class MyApp {
   }*/
 showAdmin1()
 {
-  this.showAdmin=!this.showAdmin
+  this.showAdmin=!this.showAdmin;
 }
 
 
