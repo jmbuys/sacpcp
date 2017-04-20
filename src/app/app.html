@@ -10,6 +10,7 @@
 	
 	<ion-content style="margin-top: 50px;" >
 		<ion-list id="right-menu-items" >
+
 			<button ion-item (click)="openPage(pages[1], 'home')" >
 				Home
 			</button>
@@ -30,12 +31,6 @@
 			</button>
 			<button ion-item *ngIf="!userServices.user.id" (click)="openPage(pages[2], '')">
 				Register
-			</button>
-			<button ion-item *ngIf="userServices.user.id" (click)="openPage(pages[3], '')">
-				About Me
-			</button>
-			<button ion-item (click)="openPage(pages[8], '')">
-				Event Detail
 			</button>
                         <button ion-item (click)="donate()">
 				Donate Now
