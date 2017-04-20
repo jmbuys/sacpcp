@@ -18,6 +18,7 @@ import { admin} from '../pages/admin/admin';
 import { AppVersion } from 'ionic-native';
 import { ServerVersion } from '../providers/server-version';
 import { version } from '../../package';
+import { EventReportPage } from '../pages/event-report/event-report'
 
 declare var window;
 declare var cordova;
@@ -62,6 +63,8 @@ export class MyApp {
       { title: 'Change Password', component: ChangePasswordPage },
       { title: 'About', component: AboutPage },
       { title: 'Contact Us', component: ContactPage },
+      { title: 'Privacy & Terms', component: TermsPage },
+      { title: 'Event Details', component: EventReportPage }
       { title: 'Admin', component: admin },
       { title: 'Privacy & Terms', component: TermsPage }
     ];
