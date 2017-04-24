@@ -1,3 +1,8 @@
+<style>
+	.sub_admin{
+		background-color:lightgrey;
+	}
+</style>
 <ion-menu [content]="content" side="right" persistent="true">
 
 	
@@ -37,6 +42,21 @@
                         </button> 
 			<button ion-item *ngIf="!userServices.user.id" (click)="openPage(pages[0], '')">
 				Login 
+			</button>
+			<button ion-item *ngIf="userServices.user.id && userServices.user.profile.accounttype == 'A'" (click)="showAdmin1()">
+				Admin >
+			</button>
+			<button ion-item class="sub_admin" *ngIf="showAdmin" (click)="openPage(pages[8], '')">
+				Create Event
+			</button>
+			<button ion-item class="sub_admin" *ngIf="showAdmin" (click)="openPage(pages[9], '')">
+				Edit Event
+			</button>
+			<button ion-item class="sub_admin" *ngIf="showAdmin" (click)="openPage(pages[10], '')">
+				Reports
+			</button>
+			<button ion-item class="sub_admin" *ngIf="showAdmin" (click)="openPage(pages[11], '')">
+				Contact Volunteers
 			</button>
 			<button ion-item *ngIf="userServices.user.id" (click)="logout()">
 				Logout 

@@ -12,6 +12,16 @@ hooks/
 Thumbs.db
 .tmp
 npm-debug.log
+<<<<<<< HEAD
 
 ### vscode editors ####
 .vscode/
+=======
+*.xml
+.idea/
+npm-debug.log.3085686484
+npm-debug.log.3476988269
+npm-debug.log.1083212364
+npm-debug.log.2660956575
+npm
+>>>>>>> b2b349914e6d39318e4302d88f2b92048cbcdb3b

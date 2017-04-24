@@ -21,6 +21,11 @@ import { EventPage } from '../pages/events/events';
 import { MyEventsPage } from '../pages/myevents/myevents';
 import { RegisterLoginPage } from '../pages/register-login/register-login';
 import { RegisterIndividualProfilePage } from '../pages/register-individual-profile/register-individual-profile';
+import { CreateEvent } from '../pages/admin/create-event/create-event';
+import { EditEvent } from '../pages/admin/edit-event/edit-event';
+import { Reports } from '../pages/admin/reports/reports';
+import { ContactVolunteers } from '../pages/admin/contact-volunteers/contact-volunteers';
+import { admin} from '../pages/admin/admin';
 import { AppHeaderComponent } from '../lib/components/app-header.component';
 import { HomeTab } from '../lib/components/home-tab';
 import { PhoneInput } from '../lib/components/phone-input.component';
@@ -47,10 +52,11 @@ import { ParseTimePipe } from '../lib/pipe/moment.pipe';
 import { ContactMethod } from '../lib/components/ContactMethod/contactMethod.component';
 import { RecoverSuccessPage } from '../pages/recover-success/recover-success';
 
+import {PopoverController } from 'ionic-angular';
+import {Component} from '@angular/core'
 //Added for text-mask, phone number formatting
 import { FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
-
 
 export const deepLinkConfig: DeepLinkConfig = {
   links: [
@@ -97,6 +103,11 @@ export function translateFactory(http: Http) {
     EventDetailPopup,
     ContactMethod,
     PhoneInput,
+    admin,
+    CreateEvent,
+    EditEvent,
+    Reports,
+    ContactVolunteers,
     AccordionBox,
     PrivacyTermsContent,
     RecoverSuccessPage,
@@ -135,9 +146,15 @@ export function translateFactory(http: Http) {
     RegisterLoginPage,
     RegisterIndividualProfilePage,
     EventDetailModal,
+    admin,
+    CreateEvent,
+    EditEvent,
+    Reports,
+    ContactVolunteers,
     EventDetailPopup,
     RecoverSuccessPage,
   ],
   providers: [Storage, UseridPopover, PasswordPopover, UserServices, VolunteerEventsService]
 })
+
 export class AppModule {}

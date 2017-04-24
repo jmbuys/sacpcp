@@ -6,6 +6,7 @@ import { VolunteerEventsService } from '../../lib/service/volunteer-events-servi
 import { AlertController } from 'ionic-angular';
 import { NOTIFICATION_SCHEDULE, NOTIFICATION_OPTIONS, AGE_RESTRICTION, GENDER_RESTRICTION, VOLUNTEER_RESTRICTION, EVENT_STATUS, SAMEDAY_RESTRICTION } from './../../lib/provider/eventConstants';
 
+
 @Component({
     templateUrl: 'eventdetail_modal.html'
 })
@@ -23,8 +24,6 @@ export class EventDetailModal {
     eStatus = EVENT_STATUS;
     sdRestriction = SAMEDAY_RESTRICTION;
     aRestriction = AGE_RESTRICTION;
-    nSchedule = NOTIFICATION_SCHEDULE;
-    nOptions = NOTIFICATION_OPTIONS;
 
     deregisterResult: any;
 

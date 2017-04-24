@@ -243,7 +243,7 @@ export class RegisterIndividualProfilePage {
           err => { 
             this.presentToast("Error saving profile.")
             this.hideLoading();
-            console.log(err);
+            console.log(err);//Christian thinks this may be the issue witht he phone number
             this.setError(err);
           }),
           val => this.val = val;
