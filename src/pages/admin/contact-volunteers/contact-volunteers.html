@@ -13,7 +13,30 @@
    <section id="home-body">
 
        <div>
-
+        <ion-list-header>Data Export </ion-list-header>
+                 <ion-item>
+                    <ion-label>All Registered Users</ion-label>
+                    <ion-checkbox></ion-checkbox>
+                 </ion-item>
+                 <ion-item>
+                    <ion-label> Individual Volunteers</ion-label>
+                    <ion-checkbox></ion-checkbox>
+                 </ion-item>
+                 <ion-item>
+                    <ion-label> Group Volunteers </ion-label>
+                    <ion-checkbox></ion-checkbox>
+                 </ion-item>
+                 <h5> Select the Date Range </h5>
+                 <label class="item item-input item-select">
+                            <div class="input-label"> Start Date:</div>
+                            <input type="date">
+                 </label>
+                 <label class="item item-input item-select">
+                            <div class="input-label"> End Date:</div>
+                            <input type="date">
+                 </label>
+                 <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
+                 <button ion-button small color="primary" data-toggle="modal" >Export Data</button>
              
         </div> 
     </section>
