@@ -371,6 +371,8 @@ export class EventPage {
       });
   }
   getEventsTimeRange(minTime, maxTime) {
+    console.log(minTime);
+    console.log(typeof(minTime));
     this.volunteerEventsService
       .getVolunteerEventsTimeRange(minTime, maxTime).subscribe(
       events => {this.events = events;

@@ -21,15 +21,16 @@
                  </ion-item>
                  <h5> Select the Date Range </h5>
                  <label class="item item-input item-select">
-                            <div class="input-label"> Start Date:</div>
-                            <input type="date">
+                            <div class="input-label" > Start Date:</div>
+                            <input [(ngModel)]="startdate" type="date">
                  </label>
                  <label class="item item-input item-select">
                             <div class="input-label"> End Date:</div>
-                            <input type="date">
+                            <input [(ngModel)]="enddate" type="date">
                  </label>
                  <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
-                 <button ion-button small color="primary" data-toggle="modal" >Export Data</button>
+                 <button ion-button small color="primary" (click)="getEventsTimeRange()" data-toggle="modal" >Export Data</button>
+                <
         </div> 
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -37,7 +38,7 @@
                     <div class="modal-header">
                     </div>
                     <div class="modal-body">
-                        <p> Some text </p>
+      -                  <p> Some text </p>
                     </div>
                     <div class="modal-footer">
                         <button ion-button small color="primary" data-dismiss="modal">Close</button>
