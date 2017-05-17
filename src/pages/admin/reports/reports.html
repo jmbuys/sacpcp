@@ -6,33 +6,36 @@
 <ion-content padding-left padding-right padding-top>
 
    <section id="header">
+        <div *ngIf="getEventsError" style="color:#CC1F2C">
+            There was an error getting the events in the range you provided.
+        </div>
    </section>
    <section id="home-body">
 
        <div>
                 <ion-list-header>Data Export </ion-list-header>
-                 <ion-item>
+                 <!--<ion-item>
                     <ion-label> Event Registration Detail Report</ion-label>
                     <ion-checkbox></ion-checkbox>
                  </ion-item>
                  <ion-item>
                     <ion-label> Event Registration Summary Report</ion-label>
                     <ion-checkbox></ion-checkbox>
-                 </ion-item>
+                 </ion-item>-->
                  <h5> Select the Date Range </h5>
                  <label class="item item-input item-select">
                             <div class="input-label" > Start Date:</div>
-                            <input [(ngModel)]="startdate" type="date">
+                            <input [(ngModel)]="startDate" type="date">
                  </label>
                  <label class="item item-input item-select">
                             <div class="input-label"> End Date:</div>
-                            <input [(ngModel)]="enddate" type="date">
+                            <input [(ngModel)]="endDate" type="date">
                  </label>
                  <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
-                 <button ion-button small color="primary" (click)="getEventsTimeRange()" data-toggle="modal" >Export Data</button>
+                 <button ion-button small color="primary" (click)="exportEvents()" data-toggle="modal" >Export Data</button>
                 <
-        </div> 
-        <div class="modal fade" id="myModal" role="dialog">
+        </div>
+        <!--<div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -45,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <section id="tab-content" padding>
         

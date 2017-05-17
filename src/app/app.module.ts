@@ -25,6 +25,7 @@ import { CreateEvent } from '../pages/admin/create-event/create-event';
 import { EditEvent } from '../pages/admin/edit-event/edit-event';
 import { Reports } from '../pages/admin/reports/reports';
 import { ContactVolunteers } from '../pages/admin/contact-volunteers/contact-volunteers';
+import { Message } from '../pages/admin/contact-volunteers/message'
 import { admin} from '../pages/admin/admin';
 import { AppHeaderComponent } from '../lib/components/app-header.component';
 import { HomeTab } from '../lib/components/home-tab';
@@ -42,6 +43,7 @@ import { ParentVerifyModal } from '../modals/parent-verify-modal';
 import { PrivacyTermsModal } from '../modals/privacy-terms-modal';
 
 import { UserServices } from '../lib/service/user';
+import { SignupAssistant } from '../lib/service/signupassistant';
 import { VolunteerEventsService } from '../lib/service/volunteer-events-service';
 
 import { ReferralSourcePipe } from '../lib/pipe/referralsource.pipe';
@@ -57,6 +59,8 @@ import {Component} from '@angular/core'
 //Added for text-mask, phone number formatting
 import { FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+
+import { MessageServices } from '../lib/service/message';
 
 export const deepLinkConfig: DeepLinkConfig = {
   links: [
@@ -108,6 +112,7 @@ export function translateFactory(http: Http) {
     EditEvent,
     Reports,
     ContactVolunteers,
+    Message,
     AccordionBox,
     PrivacyTermsContent,
     RecoverSuccessPage,
@@ -151,10 +156,11 @@ export function translateFactory(http: Http) {
     EditEvent,
     Reports,
     ContactVolunteers,
+    Message,
     EventDetailPopup,
     RecoverSuccessPage,
   ],
-  providers: [Storage, UseridPopover, PasswordPopover, UserServices, VolunteerEventsService]
+  providers: [Storage, UseridPopover, PasswordPopover, UserServices, VolunteerEventsService, SignupAssistant, MessageServices]
 })
 
 export class AppModule {}

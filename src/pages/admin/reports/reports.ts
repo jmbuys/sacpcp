@@ -2,38 +2,29 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { VolunteerEventsService } from '../../../lib/service/volunteer-events-service';
 import { VolunteerEvent } from '../../../lib/model/volunteer-event';
+import 'rxjs/Rx';
 
 @Component({
   templateUrl: 'reports.html'
 })
 export class Reports {
-  public startdate:Date;
-  public enddate: Date;
-  public geteventserror:Boolean;
+  public startDate:Date;
+  public endDate: Date;
+  public getEventsError:Boolean;
   public events:Array<VolunteerEvent>;
   constructor(public nav: NavController, public volunteerEventsService: VolunteerEventsService) {
 
   }
-
   back() {
     this.nav.pop();
   }
-  getEventsTimeRange() {
-    this.volunteerEventsService
-      .getVolunteerEventsTimeRange(new Date(this.startdate.toString()), new Date(this.enddate.toString())).subscribe(
-      events => {this.events = events;
-      }, err => {this.geteventserror=true;
-        console.log(err);
-      },
-      () => {this.events = this.events;
-      });
-      console.log (this.events);
+  exportEvents(){
+    this.volunteerEventsService.getEventsReport({'start': this.startDate, 'end': this.endDate}).subscribe(data => this.downloadFile(data), err => this.getEventsError = true);
   }
-  exportevents(){
-    this.volunteerEventsService.getVolunteerEvents().subscribe(events=>this.events=events,err=>this.geteventserror=true);
-    console.log(this.events);
-    console.log(this.startdate);
-    console.log(this.enddate);
+  downloadFile(data) {
+    var blob = new Blob([data],{type:'text/csv'});
+    var url = window.URL.createObjectURL(blob);
+    window.open(url);
   }
 
 

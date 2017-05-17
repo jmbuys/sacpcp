@@ -7,38 +7,56 @@
 
    <section id="header">
         <ion-navbar>
-            <ion-title>Edit - Event Name</ion-title>
+            <ion-title>Contact Volunteers</ion-title>
         </ion-navbar>
    </section>
    <section id="home-body">
 
-       <div>
-        <ion-list-header>Data Export </ion-list-header>
-                 <ion-item>
-                    <ion-label>All Registered Users</ion-label>
-                    <ion-checkbox></ion-checkbox>
+        <ion-list radio-group [(ngModel)]="sendTo">
+                <ion-item>
+                    <ion-radio name="sendTo" [id]="radio-individual" value="individual" ngDefaultControl></ion-radio>
+                    <ion-label [attr.for]="radio-individaul">Select Individual Volunteers</ion-label>
                  </ion-item>
                  <ion-item>
-                    <ion-label> Individual Volunteers</ion-label>
-                    <ion-checkbox></ion-checkbox>
+                    <ion-radio name="sendTo" [id]="radio-events" value="events" ngDefaultControl></ion-radio>
+                    <ion-label [attr.for]="radio-events">Select Event</ion-label>
                  </ion-item>
-                 <ion-item>
-                    <ion-label> Group Volunteers </ion-label>
-                    <ion-checkbox></ion-checkbox>
-                 </ion-item>
-                 <h5> Select the Date Range </h5>
-                 <label class="item item-input item-select">
-                            <div class="input-label"> Start Date:</div>
-                            <input type="date">
-                 </label>
-                 <label class="item item-input item-select">
-                            <div class="input-label"> End Date:</div>
-                            <input type="date">
-                 </label>
-                 <button ion-button small color="primary" (click)="showAdvancedItems = !showAdvancedItems">Cancel</button>
-                 <button ion-button small color="primary" data-toggle="modal" >Export Data</button>
-             
-        </div> 
+        </ion-list>
+        <ion-grid *ngIf="sendTo==='individual'">
+            <ion-row style="font-weight:bold">
+                <ion-col col-1><button small ion-button (click)="toggleSelectAllUsers(false);">Select/Deselect All</button></ion-col>
+                <ion-col col-2>First Name</ion-col>
+                <ion-col col-2>Last Name</ion-col>
+                <ion-col col-2>Contact Method</ion-col>
+                <ion-col col-2>Email/Mobile Number</ion-col>
+            </ion-row>
+            <div *ngFor="let user of users">
+                <ion-row>
+                    <ion-col col-1><ion-checkbox name="{{user.id}}checkbox" [(ngModel)]="user.selected"></ion-checkbox></ion-col>
+                    <ion-col col-2>{{user.first_name}}</ion-col>
+                    <ion-col col-2>{{user.last_name}}</ion-col>
+                    <ion-col col-2>{{user.contactmethod_name}}</ion-col>
+                    <ion-col col-2 *ngIf="user.contactmethod_name==='Phone'">({{user.mobilenumber[1]}}{{user.mobilenumber[2]}}{{user.mobilenumber[3]}}) {{user.mobilenumber[4]}}{{user.mobilenumber[5]}}{{user.mobilenumber[6]}}-{{user.mobilenumber[7]}}{{user.mobilenumber[8]}}{{user.mobilenumber[9]}}{{user.mobilenumber[10]}}</ion-col>
+                    <ion-col col-2 *ngIf="user.contactmethod_name==='Email'">{{user.email}}</ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+        <ion-grid *ngIf="sendTo==='events' && events">
+            <ion-row style="font-weight:bold">
+                <ion-col col-1><button small ion-button (click)="toggleSelectAllEvents(false);">Select/Deselect All</button></ion-col>
+                <ion-col col-2>Event Name</ion-col>
+                <ion-col col-2>Event Date</ion-col>
+                <ion-col col-2>Event Location</ion-col>
+            </ion-row>
+            <div *ngFor="let event of events">
+                <ion-row>
+                    <ion-col col-1><ion-checkbox name="{{event.title}}checkbox" [(ngModel)]="event.selected"></ion-checkbox></ion-col>
+                    <ion-col col-2>{{event.title}}</ion-col>
+                    <ion-col col-2>{{event.start | parseTime:"MMM DD"}}</ion-col>
+                    <ion-col col-2>{{event.location_name}}</ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
     </section>
     <section id="tab-content" padding>
         
@@ -49,3 +67,15 @@
         </div>
     </section>
 </ion-content>
+<ion-footer class="action-footer">
+    <ion-grid>
+        <ion-row>
+            <ion-col width-6 padding>
+                <button ion-button color="primary" (click)="back()">Cancel</button>
+            </ion-col>
+            <ion-col width-6 padding>
+                <button ion-button color="primary" style="display: inline-block; width: auto;" (click)="message();">Compose Message</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>
